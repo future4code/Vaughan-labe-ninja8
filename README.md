@@ -1,68 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Documentação Labeninja
 
-## Available Scripts
+Prezada equipe responsável pelo Labeninja,
 
-In the project directory, you can run:
+Estamos enviando um feedback sobre o acompanhamento do projeto, caso encontrem algum problema ou questão, fiquem a vontade para nos retornar.
 
-### `npm start`
+As funcionalidades que compõem o sistema do site são as seguintes:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Funcionalidades para quem contrata o ninja:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+[x] Ver todos os serviços disponíveis na plataforma
 
-### `npm test`
+[x] Adicionar em carrinho os serviços que julgar pertinente
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[x] Finalizar e contratar os serviços selecionados
 
-### `npm run build`
+### Funcionalidades para o prestador do serviço (ninja):
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[x] Cadastrar serviços
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+[x] Deletar um serviço cadastrado
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Funcionalidades UX e UI
 
-### `npm run eject`
+[x] Ver detalhes
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[x] Botão Adicionar Carrinho
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[x] Proposta contém título, descrição, valor da remuneração, método de pagamento e prazo de disponibilidade do serviço.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Design System
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Utilizaremos o Material UI por fornecer uma biblioteca compatível e com diversas opções para a personalização da página
 
-## Learn More
+## Paleta de Cores Utilizadas
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Baseado no logo fornecido pelos senhores, criamos uma paleta de cores exclusiva.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img width="746" alt="paleta de cores" src="https://user-images.githubusercontent.com/46974068/152028183-15d80d01-dd05-4a19-ba3e-1966dce4ff17.png">
 
-### Code Splitting
+## Descrição detalhada de cada página
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+#### Página Inicial - Home
 
-### Analyzing the Bundle Size
+<img width="516" alt="WIREFRAME1" src="https://user-images.githubusercontent.com/46974068/152027554-073d274c-67f4-4768-9b2e-9a7ebc608088.png">
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- Logo da empresa:
 
-### Making a Progressive Web App
+#### Página Cadastre um Ninja
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+<img width="515" alt="WIREFRAME2" src="https://user-images.githubusercontent.com/46974068/152027704-bd6cb53f-afd5-44f1-9038-bbdc19a9b3bd.png">
 
-### Advanced Configuration
+#### Página Contrate um Ninja
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+<img width="512" alt="WIREFRAME3" src="https://user-images.githubusercontent.com/46974068/152027743-fa70e054-f955-4c21-96de-b16c431861d1.png">
 
-### Deployment
+#### Página Detalhes do Item
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+<img width="513" alt="WIREFRAME4" src="https://user-images.githubusercontent.com/46974068/152027804-9d35b3b9-17e4-4301-a9c7-bdbaa0abc49c.png">
 
-### `npm run build` fails to minify
+#### Página Carrinho
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<img width="512" alt="WIREFRAME5" src="https://user-images.githubusercontent.com/46974068/152027842-1edeb908-8aaf-4588-8467-f56f41381519.png">

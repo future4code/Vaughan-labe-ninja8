@@ -4,8 +4,8 @@ import ContractDetailPage from './pages/ContractDetailPage/ContractDetailPage';
 import ContractPage from './pages/ContractPage/ContractPage';
 import HomePage from './pages/HomePage/HomePage';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
-
-
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {theme} from './Theme/theme'
 class App extends React.Component {
   state = {
     currentScreen: "home",
@@ -45,9 +45,9 @@ class App extends React.Component {
 
   render () {
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       {this.selectPage()}
-    </div>
+    </ThemeProvider>
   )
   }
 }

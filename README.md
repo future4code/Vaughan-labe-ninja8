@@ -30,7 +30,7 @@ As funcionalidades que compõem o sistema do site são as seguintes:
 
 ### Design System
 
-Utilizaremos o Material UI por fornecer uma biblioteca compatível e com diversas opções para a personalização da página
+Utilizaremos o Material UI por fornecer uma biblioteca compatível e com diversas opções para a personalização do projeto.
 
 ## Paleta de Cores Utilizadas
 

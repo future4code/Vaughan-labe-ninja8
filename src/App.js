@@ -9,7 +9,6 @@ import {theme} from './Theme/theme'
 class App extends React.Component {
   state = {
     currentScreen: "home",
-    selectedPlaylist: ""
   }
   handleHomePage = () => {
 	this.setState({currentScreen: "home"})

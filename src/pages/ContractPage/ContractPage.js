@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { URL_BASE, Headers } from "../../constants/urls";
-import { ButtonsContainer, JobsCardContainer } from "./styled";
+import { ButtonsContainer, JobsCardContainer, JobsContainer } from "./styled";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import {
   IconButton,
@@ -10,7 +10,7 @@ import {
   Button,
   Typography,
 } from "@mui/material";
-import styled from "styled-components";
+
 
 export default class ContractPage extends React.Component {
   state = {
@@ -18,7 +18,7 @@ export default class ContractPage extends React.Component {
     jobs: [],
     precoMax: "",
     precoMin: "",
-    sortingParameter: "",
+    sortingParameter: ""
   };
 
   componentDidMount() {
@@ -52,7 +52,7 @@ export default class ContractPage extends React.Component {
       precoMin: event.target.value,
     });
   };
-
+  
   updateSortingParameter = (event) => {
     this.setState({ sortingParameter: event.target.value });
   };
@@ -152,7 +152,7 @@ export default class ContractPage extends React.Component {
             <option value="price-descending">Preço - Decrescente</option>
           </select>
         </div>
-        {jobsList}
+        <JobsContainer>{jobsList}</JobsContainer>
       </div>
     );
   }

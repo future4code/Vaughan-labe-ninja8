@@ -3,8 +3,9 @@ import Card from '@mui/material/Card';
 export const JobsCardContainer = styled(Card)`
     display: flex;
     flex-direction: column;
-    border: solid black 1px;
+    border: solid #7660A6 1px;
     max-width: 250px;
+    background-color: #c0abed;
 `
 export const ButtonsContainer = styled.div`
     display: flex;

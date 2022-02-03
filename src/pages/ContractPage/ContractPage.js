@@ -6,14 +6,7 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { IconButton, CardContent, CardActions, Button, Typography } from '@mui/material'
 import styled from 'styled-components'
 
-// const CardJobs = styled.div`
-// display: flex;
-// flex-direction: column;
-// border: 1px solid black;
-// margin: 10px;
-// height: 100px;
-// width: 350px;
-//  `
+
 
 export default class ContractPage extends React.Component {
   state = {
@@ -55,8 +48,22 @@ export default class ContractPage extends React.Component {
     })
   }
   
+   
+
   render () {
-    const jobsList = this.state.jobs.map((list) => 
+
+    const filteredList = this.state.jobs.filter(job => {
+      return job.title.toLowerCase().includes(this.state.buscaTitulo.toLowerCase()) || job.description.toLowerCase().includes(this.state.buscaTitulo)
+    })
+    
+    .filter(job => {
+      return this.state.precoMax === "" || job.price <= this.state.precoMax
+    })
+    .filter(job => {
+      return this.state.precoMin === "" || job.price >= this.state.precoMin
+    })
+
+    const jobsList = filteredList.map((list) => 
     // list.list2.map((listing) => 
     // )
     <JobsCardContainer key={list.id}>
@@ -78,16 +85,8 @@ export default class ContractPage extends React.Component {
         </ButtonsContainer>
       </CardActions>
     </JobsCardContainer>
-    ).filter(job => {
-      return job.title.toLowerCase().includes(this.state.buscaTitulo.toLowerCase()) || job.description.toLowerCase().includes(this.state.buscaTitulo)
-    })
-
-    .filter(job => {
-      return this.state.precoMax === "" || job.price <= this.state.precoMax
-    })
-    .filter(job => {
-      return this.state.precoMin === "" || job.price >= this.state.precoMin
-    })
+    )
+    
     
     return (
       <div>

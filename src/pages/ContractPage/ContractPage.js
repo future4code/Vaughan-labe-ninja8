@@ -11,12 +11,14 @@ import {
   Typography,
 } from "@mui/material";
 
+
 export default class ContractPage extends React.Component {
   state = {
     buscaTitulo: "",
     jobs: [],
     precoMax: "",
     precoMin: "",
+    sortingParameter: ""
   };
 
   componentDidMount() {
@@ -50,6 +52,10 @@ export default class ContractPage extends React.Component {
       precoMin: event.target.value,
     });
   };
+  
+  updateSortingParameter = (event) => {
+    this.setState({ sortingParameter: event.target.value });
+  };
 
   render() {
     const filteredList = this.state.jobs
@@ -61,12 +67,27 @@ export default class ContractPage extends React.Component {
           job.description.toLowerCase().includes(this.state.buscaTitulo)
         );
       })
-
       .filter((job) => {
         return this.state.precoMax === "" || job.price <= this.state.precoMax;
       })
       .filter((job) => {
         return this.state.precoMin === "" || job.price >= this.state.precoMin;
+      })
+      .sort((a, b) => {
+        switch (this.state.sortingParameter) {
+          case "title":
+            return a.title.localeCompare(b.title);
+          case "dueDate":
+            return (
+              new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime()
+            );
+          case "price-ascending":
+            return a.price - b.price;
+          case "price-descending":
+            return b.price - a.price;
+          default:
+            return a.title.localeCompare(b.title);
+        }
       });
 
     const jobsList = filteredList.map((list) => (
@@ -120,6 +141,16 @@ export default class ContractPage extends React.Component {
             value={this.state.precoMin}
             onChange={this.onChangePrecoMin}
           />
+          <select
+            name="sort"
+            value={this.state.sortingParameter}
+            onChange={this.updateSortingParameter}
+          >
+            <option value="title">Título</option>
+            <option value="dueDate">Prazo</option>
+            <option value="price-ascending">Preço - Crescente</option>
+            <option value="price-descending">Preço - Decrescente</option>
+          </select>
         </div>
         <JobsContainer>{jobsList}</JobsContainer>
       </div>

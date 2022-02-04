@@ -136,8 +136,9 @@ export default class ContractPage extends React.Component {
     return (
       <div>
         <Header>
+          <Button>
         <img src="https://labenu.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2a51ad96-d8b7-4df3-bf68-828d473c84ef%2Flabeninjas2.png?table=block&id=82cfc039-d5ca-492a-943b-e315609ce8d4&spaceId=f97190af-c9c2-4592-9ae2-6311b6b728de&width=740&userId=&cache=v2" width="80px"
-        onClick={this.props.handleHomePage}></img>
+        onClick={this.props.handleHomePage}></img></Button>
           <div>
             <TextField
               placeholder="Busca por título ou descrição"
@@ -168,7 +169,9 @@ export default class ContractPage extends React.Component {
               </Select>
           </div>
           <div>
+            <Button>
             <ShoppingCartIcon color="primary" onClick={this.props.handleCartPage}>Carrinho</ShoppingCartIcon>
+            </Button>
           </div>
         </Header>
         <JobsContainer>{jobsList}</JobsContainer>

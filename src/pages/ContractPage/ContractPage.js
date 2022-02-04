@@ -6,6 +6,9 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
+import styled from 'styled-components';
+import HomeIcon from '@mui/icons-material/Home';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import {
   IconButton,
   CardContent,
@@ -17,7 +20,7 @@ import {
 
 const Header = styled.header`
 background-color: #f5f4fc;
-height: 15vh;
+height: 12vh;
 display: flex;
 padding: 15px;
 margin: auto;
@@ -133,11 +136,8 @@ export default class ContractPage extends React.Component {
     return (
       <div>
         <Header>
-        <img src="https://labenu.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2a51ad96-d8b7-4df3-bf68-828d473c84ef%2Flabeninjas2.png?table=block&id=82cfc039-d5ca-492a-943b-e315609ce8d4&spaceId=f97190af-c9c2-4592-9ae2-6311b6b728de&width=740&userId=&cache=v2" width="80px"></img>
-          <div>
-            <Button onClick={this.props.handleHomePage}>Home</Button>
-            <Button onClick={this.props.handleCartPage}>Carrinho</Button>
-          </div>
+        <img src="https://labenu.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2a51ad96-d8b7-4df3-bf68-828d473c84ef%2Flabeninjas2.png?table=block&id=82cfc039-d5ca-492a-943b-e315609ce8d4&spaceId=f97190af-c9c2-4592-9ae2-6311b6b728de&width=740&userId=&cache=v2" width="80px"
+        onClick={this.props.handleHomePage}></img>
           <div>
             <TextField
               placeholder="Busca por título ou descrição"
@@ -166,6 +166,9 @@ export default class ContractPage extends React.Component {
                 <MenuItem value="price-ascending">Preço - Crescente</MenuItem>
                 <MenuItem value="price-descending">Preço - Decrescente</MenuItem>
               </Select>
+          </div>
+          <div>
+            <ShoppingCartIcon color="primary" onClick={this.props.handleCartPage}>Carrinho</ShoppingCartIcon>
           </div>
         </Header>
         <JobsContainer>{jobsList}</JobsContainer>

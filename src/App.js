@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage/HomePage';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
 import { ThemeProvider } from '@mui/material/styles';
 import {theme} from './Theme/theme'
+
 class App extends React.Component {
   state = {
     currentScreen: "home",

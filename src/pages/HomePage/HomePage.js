@@ -3,6 +3,7 @@ import Button from "@mui/material/Button";
 import styled from "styled-components";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Backdrop } from "@mui/material";
+import BookOnlineIcon from "@mui/icons-material/BookOnline";
 
 const Header = styled.header`
   background-color: #f5f4fc;
@@ -46,7 +47,7 @@ const BannerImage = styled.img`
 
 const BannerText = styled.div`
   color: #7660a6;
-  width: 40vw;
+  width: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,6 +55,10 @@ const BannerText = styled.div`
   padding: 5vh;
   margin: 10vh;
   font-size: large;
+`;
+
+const BannerParagraph = styled.p`
+  padding: 3vh;
 `;
 
 export default class HomePage extends React.Component {
@@ -96,21 +101,37 @@ export default class HomePage extends React.Component {
           <BannerImage src="https://cdn.pixabay.com/photo/2018/07/18/11/59/handyman-3546194_1280.jpg" />
           <BannerText>
             <h1>LabeNinjas</h1>
-            <p>O talento certo no momento certo</p>
+            <BannerParagraph>O talento certo no momento certo</BannerParagraph>
+            <Button variant="contained" onClick={this.props.handleContractPage}>
+              Contrate Agora
+            </Button>
           </BannerText>
         </DivHome>
-        <DivBotoes>
-          <Botoes>
-            <Button variant="contained" onClick={this.props.handleRegisterPage}>
-              Seja um Ninja
-            </Button>
-          </Botoes>
-          <Botoes>
-            <Button variant="contained" onClick={this.props.handleContractPage}>
-              Contrate um Ninja
-            </Button>
-          </Botoes>
-        </DivBotoes>
+        <div>
+          <p>Precisando de um serviço? </p>
+          <p>Nossos Ninjas estão aqui para ajudar!</p>
+          <div></div>
+        </div>
+        <div>
+          <DivBotoes>
+            <Botoes>
+              <Button
+                variant="contained"
+                onClick={this.props.handleRegisterPage}
+              >
+                Seja um Ninja
+              </Button>
+            </Botoes>
+            <Botoes>
+              <Button
+                variant="contained"
+                onClick={this.props.handleContractPage}
+              >
+                Contrate um Ninja
+              </Button>
+            </Botoes>
+          </DivBotoes>
+        </div>
       </div>
     );
   }

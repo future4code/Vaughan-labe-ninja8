@@ -1,3 +1,23 @@
+
+
+## Labeninja 8
+
+## O que funciona
+- Filtros
+- Criação de cards pela API
+- Página de contratação de serviços
+- renderização de telas
+- Estilização da Home, com exceção dos ícones das redes sociais.
+
+## O que não funciona
+- Página de cadastro
+- Página de detalhes dos jobs
+- Carrinho
+
+## Link Surge
+http://gamy-dinosaurs.surge.sh/
+
+
 # Documentação Labeninja
 
 Prezada equipe responsável pelo Labeninja,

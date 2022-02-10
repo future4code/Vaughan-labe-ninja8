@@ -81,3 +81,5 @@ Baseado no logo fornecido pelos senhores, criamos uma paleta de cores exclusiva.
 #### Página Carrinho
 
 <img width="512" alt="WIREFRAME5" src="https://user-images.githubusercontent.com/46974068/152027842-1edeb908-8aaf-4588-8467-f56f41381519.png">
+
+# Correcao
